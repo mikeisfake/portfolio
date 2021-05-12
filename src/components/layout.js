@@ -7,7 +7,7 @@ const Layout = ({children}) => {
   return (
     <div id="main-container">
       <div id="nav">
-        <Link to='/home'>Home</Link>
+        <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
         <Link to='/projects'>Projects</Link>
         <Link to='/resume'>Resume</Link>
