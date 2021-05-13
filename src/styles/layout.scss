@@ -1,0 +1,25 @@
+// modules
+@use './fonts';
+@use './colors';
+
+#nav {
+  display: flex;
+  width: 100%;
+  font-size: 1.5rem;
+  a {
+    padding: 15px;
+    color: colors.$green;
+    text-transform: uppercase;
+    font-family: fonts.$monospace;
+    &:hover {
+      color: colors.$white;
+    }
+  }
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #111111;
+}
