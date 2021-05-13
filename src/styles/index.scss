@@ -4,21 +4,20 @@
 //pages
 @use './home';
 @use './layout';
+@use './about';
 
 // modules
 @use './fonts';
 @use './colors';
 
 body {
-  background: colors.$black;
+  background-color: colors.$black;
+  background-image: radial-gradient(colors.$off-black 1px, colors.$black 1px);
+  background-size: 20px 20px;
   color: colors.$white;
   font-family: fonts.$roboto;
 }
 
 a {
   text-decoration: none;
-}
-
-svg {
-  stroke: red;
 }

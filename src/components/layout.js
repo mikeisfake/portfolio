@@ -1,22 +1,32 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import {Helmet} from 'react-helmet'
 
 import '../styles/index.scss'
 
 const Layout = ({children}) => {
-  return (
-    <div id="main-container">
-      <div id="nav">
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/projects'>Projects</Link>
-        <Link to='/resume'>Resume</Link>
-        <Link to='/blog'>Blog</Link>
-      </div>
-      {children}
+  return (<div id="main-container">
+    <div id="nav">
+      <Link to='/' activeStyle={{
+          color: "#2f968a"
+      }}>home.</Link>
+      <Link to='/projects' activeStyle={{
+          color: "#2f968a"
+      }}>projects.</Link>
+      <Link to='/resume' activeStyle={{
+          color: "#2f968a"
+      }}>resume.</Link>
+      <Link to='/about' activeStyle={{
+          color: "#2f968a"
+      }}>about.</Link>
+      <Link to='/blog' activeStyle={{
+          color: "#2f968a"
+      }}>blog.</Link>
+      <Link to='/contact' activeStyle={{
+          color: "#2f968a"
+      }}>contact.</Link>
     </div>
-  )
+    {children}
+  </div>)
 }
 
 export default Layout

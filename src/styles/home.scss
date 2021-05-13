@@ -1,21 +1,59 @@
 @use './colors';
 @use './fonts';
+@use './format';
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite both;
+}
 
 #hero {
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   .title {
     h1 {
-      font-size: 5rem;
+      font-size: 10rem;
       font-family: fonts.$display;
       color: colors.$yellow;
     }
     h2 {
-      font-family: fonts.$monospace;
-      font-size: 1.2rem;
+      font-family: fonts.$roboto;
+      font-weight: bold;
+      letter-spacing: format.$letter-spacing;
+      text-transform: lowercase;
+      font-size: 2rem;
+    }
+  }
+  a {
+    display: inline-block;
+    margin-top: 100px;
+    border: 5px solid colors.$green;
+    padding: 20px;
+    color: colors.$white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: format.$letter-spacing;
+    border-radius: format.$radius;
+    &:hover {
+      background: colors.$green;
     }
   }
 }
