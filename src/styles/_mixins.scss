@@ -1,0 +1,16 @@
+@use './fonts';
+@use './colors';
+@use './format';
+
+@mixin title ($size: 2rem, $color: colors.$yellow) {
+  font-family: fonts.$display;
+  font-size: $size;
+  font-color: $color;
+}
+
+@mixin transparent-box () {
+  background: colors.$overlay;
+  padding: 40px;
+  border-radius: format.$radius;
+  margin: 20px 0;
+}
