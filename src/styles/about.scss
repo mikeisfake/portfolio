@@ -1,26 +1,61 @@
 @use './colors';
 @use './fonts';
+@use './format';
 
-.tools {
-  width: 312px;
+@use './mixins';
+
+
+
+#about {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  div {
-    margin-bottom: 30px;
-  }
-  h2 {
+  height: 100vh;
+  width: 50vw;
+  margin-left: -300px;
+  background: colors.$black;
+  section {
+    background: colors.$overlay;
+    height: 90%;
+    width: 70%;
+    padding: 20px;
+    border-radius: format.$radius;
     font-size: 1.2rem;
-    text-transform: uppercase;
-  }
-  i {
-    font-size: 2rem;
-    padding: 25px;
-    margin: 10px;
-    border: 1px solid colors.$white;
-    border-radius: 1rem;
-    display:inline-block;
+    line-height: 2rem;
+    h1 {
+      font-size: 4rem;
+      margin: 50px 0;
+      color: colors.$yellow;
+      font-family: fonts.$display;
+      span {
+        color: colors.$white;
+      }
+    }
+    .description {
+      @include mixins.transparent-box;
+    }
+    .tools {
+      @include mixins.transparent-box;
+      h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          font-size: 1rem;
+          background: colors.$black;
+          padding: 10px;
+          margin: 10px;
+          border-radius: format.$radius;
+          text-transform: uppercase;
+          & i {
+            color: colors.$green;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
   }
 }
