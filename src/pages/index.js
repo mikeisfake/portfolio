@@ -3,6 +3,7 @@ import {Link} from 'gatsby'
 
 
 import Layout from '../components/layout'
+import EmailForm from '../components/email'
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
         </span>
 
       </div>
+
     </Layout>
   )
 }

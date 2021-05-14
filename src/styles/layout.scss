@@ -13,20 +13,27 @@
 
 #nav {
   display: flex;
+  flex-direction: column;
   position:fixed;
-  top: 150px;
-  left: calc(100vw - 1000px);
+  top: 20px;
+  right: calc(100vw - 100%);
+  text-align: right;
   a {
     font-size: 1.5rem;
     color: colors.$white;
-    padding: 15px 5px;
-    margin: 0 15px;
+    padding: .5rem;
+    margin: 2px 15px;
     letter-spacing: format.$letter-spacing;
     text-transform: lowercase;
     font-weight: bold;
-    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transition: format.$ease;
+    &::after {
+      content: '';
+      color: colors.$white;
+    }
     &:hover {
-      border-bottom: 5px solid colors.$green;
+      border-right: 5px solid colors.$green;
     }
   }
 }

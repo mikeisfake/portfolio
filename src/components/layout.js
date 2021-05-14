@@ -7,23 +7,20 @@ const Layout = ({children}) => {
   return (<div id="main-container">
     <div id="nav">
       <Link to='/' activeStyle={{
-          color: "#2f968a"
-      }}>home.</Link>
+          'border-right' : '5px solid #2f968a'
+      }}>home</Link>
       <Link to='/projects' activeStyle={{
-          color: "#2f968a"
-      }}>projects.</Link>
-      <Link to='/resume' activeStyle={{
-          color: "#2f968a"
-      }}>resume.</Link>
+          'border-right' : '5px solid #2f968a'
+      }}>projects</Link>
       <Link to='/about' activeStyle={{
-          color: "#2f968a"
-      }}>about.</Link>
+          'border-right' : '5px solid #2f968a'
+      }}>about</Link>
       <Link to='/blog' activeStyle={{
-          color: "#2f968a"
-      }}>blog.</Link>
+          'border-right' : '5px solid #2f968a'
+      }}>blog</Link>
       <Link to='/contact' activeStyle={{
-          color: "#2f968a"
-      }}>contact.</Link>
+          'border-right' : '5px solid #2f968a'
+        }}>contact</Link>
     </div>
     {children}
   </div>)
