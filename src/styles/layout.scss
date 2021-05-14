@@ -37,3 +37,32 @@
     }
   }
 }
+
+#footer {
+  background: colors.$black;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  right: calc(100vw - 100%);
+  .socials {
+    margin-left: calc(100vw - 50%);
+    padding: 35px 0;
+    ul {
+      li {
+        display: inline-block;
+        margin: 0 15px;
+        a {
+          color: colors.$white;
+          font-size: 1.5rem;
+          border: 3px solid colors.$white;
+          padding: 10px;
+          padding-bottom: 5px;
+          border-radius: format.$radius;
+          &:hover {
+            border: 3px solid colors.$green;
+          }
+        }
+      }
+    }
+  }
+}
