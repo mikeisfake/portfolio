@@ -16,17 +16,27 @@
   background: colors.$black;
   section {
     background: colors.$overlay;
-    height: 90%;
     width: 70%;
     padding: 20px;
     border-radius: format.$radius;
     font-size: 1.2rem;
     line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     h1 {
       font-size: 4rem;
-      margin: 50px 0;
+      margin: 20px 0;
       color: colors.$yellow;
       font-family: fonts.$display;
+      display: flex;
+      align-items: center;
+      img {
+        border-radius: 100%;
+        width: 70px;
+        margin-right: 20px;
+      }
       span {
         color: colors.$white;
       }
