@@ -1,0 +1,70 @@
+@use './fonts';
+@use './colors';
+@use './format';
+
+.contact {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: fonts.$display;
+    color: colors.$yellow;
+    letter-spacing: format.$letter-spacing;
+    & span {
+      color: colors.$white;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+    padding: 15px;
+    border: 1px solid colors.$off-black;
+    border-radius: format.$radius;
+    background: colors.$black;
+    width: 50%;
+    label {
+      font-size: 1.2rem;
+      font-family: fonts.$monospace;
+      letter-spacing: format.$letter-spacing;
+      text-transform: lowercase;
+      input, textarea {
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: format.$radius;
+        background: colors.$black;
+        outline: none;
+        border: 3px solid colors.$off-black;
+        box-shadow: none;
+        resize: none;
+        width: calc(100% - 26px);
+        color: colors.$white;
+        font-size: 1.5rem;
+        font-family: fonts.$roboto;
+        letter-spacing: 2px;
+        transition: format.$ease;
+        &:focus {
+          border: 3px solid colors.$yellow;
+        }
+      }
+    }
+    button[type="submit"] {
+      border: 3px solid colors.$green;;
+      border-radius: format.$radius;
+      padding: 15px;
+      align-self: flex-end;
+      font-size: 1rem;
+      color: colors.$white;
+      background: transparent;
+      transition: format.$ease;
+      &:hover {
+        background: colors.$green;
+        cursor: pointer;
+      }
+    }
+  }
+}

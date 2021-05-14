@@ -6,8 +6,9 @@ import EmailForm from '../components/email'
 const Contact = () => {
   return (
     <Layout>
-      <h1>Contact page</h1>
-      <EmailForm />
+      <div className="contact">
+        <EmailForm />
+      </div>
     </Layout>
   )
 }
