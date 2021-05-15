@@ -19,6 +19,22 @@
   }
 }
 
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform:rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave {
+  animation: wave 2s ease-in-out infinite both;
+}
+
 .pulse {
   animation: pulse 3s ease-in-out infinite both;
 }
@@ -33,6 +49,12 @@
       font-size: 10rem;
       font-family: fonts.$display;
       color: colors.$yellow;
+      display: flex;
+      align-items: center;
+      & span {
+        font-size: 6rem;
+        margin-right: 20px;
+      }
     }
     h2 {
       font-family: fonts.$roboto;
