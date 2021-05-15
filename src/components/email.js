@@ -1,11 +1,15 @@
 import React from 'react'
 import {useForm} from '@formspree/react'
 
+import Thanks from './thanks'
+
 const EmailForm = () => {
 
   const [state, handleSubmit] = useForm('xqkwppnd');
   if (state.succeeded) {
-      return <p>Thanks for reaching out!</p>;
+      return (
+        <Thanks />
+      );
   }
 
   window.onbeforeunload = () => {
@@ -16,7 +20,7 @@ const EmailForm = () => {
 
  return (
    <>
-     <h1> <span role='img' aria-label='envelope emoji'>&#x1F4EE;</span> get in touch<span>.</span></h1>
+     <h1> <span role='img' aria-label='envelope emoji'>&#x1F4E9;</span> get in touch<span>.</span></h1>
      <form onSubmit={handleSubmit}>
 
        <input type="text" name="name" placeholder="your name" aria-label="your name"/>
