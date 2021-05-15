@@ -18,17 +18,12 @@ const EmailForm = () => {
    <>
      <h1> <span role='img' aria-label='envelope emoji'>&#x1F4EE;</span> get in touch<span>.</span></h1>
      <form onSubmit={handleSubmit}>
-       <label htmlFor="name">full name
-         <input type="text" name="name" />
-       </label>
-       <label htmlFor="email">email address
-         <input type="email" name="_replyto" />
-       </label>
-       <label htmlFor="message">message
-         <textarea name="message" id="message" cols="30" rows="10"></textarea>
-       </label>
 
-       <button type="submit" disabled={state.submitting}> send message </button>
+       <input type="text" name="name" placeholder="your name" aria-label="your name"/>
+       <input type="email" name="_replyto" placeholder="email address" aria-label="email address"/>
+       <textarea name="message" id="message" cols="30" rows="10" placeholder="message" aria-label="message body"></textarea>
+
+       <button type="submit" disabled={state.submitting} className="pulse"> send message </button>
 
      </form>
    </>

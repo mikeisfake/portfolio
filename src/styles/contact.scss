@@ -26,11 +26,6 @@
     border-radius: format.$radius;
     background: colors.$black;
     width: 50%;
-    label {
-      font-size: 1.2rem;
-      font-family: fonts.$monospace;
-      letter-spacing: format.$letter-spacing;
-      text-transform: lowercase;
       input, textarea {
         padding: 10px;
         margin: 10px 0;
@@ -50,7 +45,6 @@
           border: 3px solid colors.$yellow;
         }
       }
-    }
     button[type="submit"] {
       border: 3px solid colors.$green;;
       border-radius: format.$radius;
