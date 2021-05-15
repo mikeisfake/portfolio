@@ -1,11 +1,15 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 
+import {Link} from 'gatsby'
+
 import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
+import { AboutText } from '../components/AboutText'
 
 const About = () => {
+
   return (
     <Layout>
       <Helmet>
@@ -13,11 +17,8 @@ const About = () => {
       </Helmet>
       <div id="about">
         <section>
-          <h1><StaticImage src='../images/animoji.png' alt='animoji protrait' /> a bit about me<span>.</span></h1>
-          <p className="description">
-            My name is Mike. I am a frontend software engineer based in the DMV area. I have been writing HTML, CSS and Javascript pages as a hobby since I was 12 years old... I had a really cool myspace, and I created a ton of themes for tumblr back in the day too!. <br /><br />
-            Now, 10 years on, I have decided to make my hobby into a career. I have formalized my casual experience into an education at Flatiron School, where I expanded on my foundational knowledge and acquired a deeper love and understanding of software engineering.
-          </p>
+          <h1><StaticImage src='../images/animoji.png' alt='animoji protrait' /> a bit about me</h1>
+          <AboutText />
 
           <div className="tools">
             <h2>languages/frameworks I have experience in so far.</h2>
@@ -30,7 +31,7 @@ const About = () => {
               <li><i class="devicon-react-original"></i> React</li>
               <li><i class="devicon-sass-original"></i> Sass</li>
               <li><i class="devicon-redux-original"></i> Redux</li>
-              <li><i class="devicon-redux-original"></i> Gatsby</li>
+              <li><i class="devicon-gatsby-plain"></i> Gatsby</li>
             </ul>
             <h2>preferred tools of the trade.</h2>
             <ul>

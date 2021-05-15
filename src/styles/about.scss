@@ -32,6 +32,7 @@
       font-family: fonts.$display;
       display: flex;
       align-items: center;
+      line-height: 100%;
       img {
         border-radius: 100%;
         width: 70px;
@@ -43,6 +44,10 @@
     }
     .description {
       @include mixins.transparent-box;
+      font-family: fonts.$monospace;
+      a {
+        border-bottom: 1px solid colors.$gray;
+      }
     }
     .tools {
       @include mixins.transparent-box;
