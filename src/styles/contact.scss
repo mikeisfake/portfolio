@@ -37,7 +37,7 @@
         border-radius: format.$radius;
         background: colors.$overlay;
         outline: none;
-        border: 3px solid colors.$off-black;
+        border: 3px solid transparent;
         box-shadow: none;
         resize: none;
         width: calc(100% - 26px);
