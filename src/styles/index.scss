@@ -22,10 +22,21 @@ body {
 
 a {
   text-decoration: none;
+  color: colors.$gray;
+  &:hover {
+    color: colors.$yellow;
+  }
+  &:visited {
+    color: colors.$gray;
+    &:hover {
+      color: colors.$yellow;
+    }
+  }
 }
 
 @include mixins.wave-animation;
 @include mixins.pulse-animation;
+@include mixins.color-slide-animation(colors.$black, colors.$mid-black);
 
 .wave {
   animation: wave 2s ease-in-out infinite both;
@@ -33,4 +44,8 @@ a {
 
 .pulse {
   animation: pulse 3s ease-in-out infinite both;
+}
+
+.color-slide {
+  animation: color-slide 3s ease-in-out infinite both;
 }

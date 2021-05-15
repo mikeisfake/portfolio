@@ -47,3 +47,17 @@
     }
   }
 }
+
+@mixin color-slide-animation ($color1, $color2) {
+  @keyframes color-slide {
+    0% {
+      background: $color1;
+    }
+    50% {
+      background: $color2;
+    } 
+    100% {
+      background: $color1;
+    }
+  }
+}
