@@ -14,3 +14,36 @@
   border-radius: format.$radius;
   margin: 20px 0;
 }
+
+@mixin wave-animation () {
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform:rotate(20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+@mixin pulse-animation () {
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    50% {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}

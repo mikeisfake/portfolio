@@ -10,6 +10,7 @@
 // modules
 @use './fonts';
 @use './colors';
+@use './mixins';
 
 body {
   background-color: colors.$black;
@@ -21,4 +22,15 @@ body {
 
 a {
   text-decoration: none;
+}
+
+@include mixins.wave-animation;
+@include mixins.pulse-animation;
+
+.wave {
+  animation: wave 2s ease-in-out infinite both;
+}
+
+.pulse {
+  animation: pulse 3s ease-in-out infinite both;
 }

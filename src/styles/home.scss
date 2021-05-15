@@ -2,42 +2,6 @@
 @use './fonts';
 @use './format';
 
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform:rotate(20deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.wave {
-  animation: wave 2s ease-in-out infinite both;
-}
-
-.pulse {
-  animation: pulse 3s ease-in-out infinite both;
-}
 
 #hero {
   display: flex;
@@ -62,6 +26,7 @@
       letter-spacing: format.$letter-spacing;
       text-transform: lowercase;
       font-size: 2rem;
+      text-align: center;
     }
   }
   a {
