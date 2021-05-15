@@ -16,7 +16,7 @@ const EmailForm = () => {
 
  return (
    <>
-     <h1> &#x1F4EE; get in touch<span>.</span></h1>
+     <h1> <span role='img' aria-label='envelope emoji'>&#x1F4EE;</span> get in touch<span>.</span></h1>
      <form onSubmit={handleSubmit}>
        <label htmlFor="name">full name
          <input type="text" name="name" />
