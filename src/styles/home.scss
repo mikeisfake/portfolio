@@ -10,7 +10,7 @@
   height: 100vh;
   .title {
     h1 {
-      font-size: 10rem;
+      font-size: 8rem;
       font-family: fonts.$display;
       color: colors.$yellow;
       display: flex;
@@ -21,7 +21,7 @@
       }
     }
     h2 {
-      font-family: fonts.$roboto;
+      font-family: fonts.$monospace;
       font-weight: bold;
       letter-spacing: format.$letter-spacing;
       text-transform: lowercase;

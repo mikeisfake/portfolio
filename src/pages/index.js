@@ -1,19 +1,20 @@
 import * as React from "react"
-import {Link} from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
+import { Emoji } from '../components/Emoji'
 
 const Index = () => {
   return (
     <Layout>
       <div id="hero">
         <div className="title">
-          <h1><span className="wave" role='img' aria-label='waving emoji'>&#x1F44B;&#x1F3FE; </span>i'm mike</h1>
+          <h1>
+            <Emoji description="waving hand" hex="&#x1F44B;&#x1F3FE;" className="wave" />i'm mike</h1>
           <h2>& I make beautiful things for the web.</h2>
         </div>
         <span className="cta">
-          <Link to='/contact' className="pulse">contact me</Link>
+          <AniLink cover bg="#2f968a" direction="right" to='/contact' className="pulse">contact me</AniLink>
         </span>
 
       </div>

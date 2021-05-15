@@ -1,12 +1,12 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
-import { projectData } from '../data/projectData'
-import ProjectCard from '../components/projectCard'
+import { ProjectData } from '../data/ProjectData'
+import ProjectCard from '../components/ProjectCard'
 
 const Projects = () => {
 
-  const cards = projectData.map((project, i) => {
+  const cards = ProjectData.map((project, i) => {
     return (
       <ProjectCard
         title={project.title}

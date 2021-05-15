@@ -1,12 +1,10 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
 
-import {Link} from 'gatsby'
-
 import { StaticImage } from 'gatsby-plugin-image'
 
-import Layout from '../components/layout'
-import { AboutText } from '../components/AboutText'
+import Layout from '../components/Layout'
+import AboutText from '../components/AboutText'
 
 const About = () => {
 

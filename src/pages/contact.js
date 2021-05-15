@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import EmailForm from '../components/email'
+import Layout from '../components/Layout'
+import EmailForm from '../components/Email'
 
 const Contact = () => {
   return (

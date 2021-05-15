@@ -1,9 +1,11 @@
 import React from 'react'
 
+import {Emoji} from './Emoji'
+
 const Thanks = () => {
   return (
     <a href="/" className="thanks">
-      <span className="wave">&#x270C;</span> Thanks for reaching out!
+      <Emoji description="peace emoji" hex="&#x270C;" className="wave" /> Thanks for reaching out!
     </a>
   )
 }
