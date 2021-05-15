@@ -15,6 +15,8 @@ export const projectData = [
   {
     title: 'thirtyfive',
     description: '',
+    github: '',
+    image: '',
     technologies: [
       'react',
       'redux',
