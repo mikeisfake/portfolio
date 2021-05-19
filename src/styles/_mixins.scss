@@ -2,6 +2,7 @@
 @use './colors';
 @use './format';
 
+//formatting
 @mixin title ($size: 2rem, $color: colors.$yellow) {
   font-family: fonts.$display;
   font-size: $size;
@@ -15,6 +16,7 @@
   margin: 20px 0;
 }
 
+//animations
 @mixin wave-animation () {
   @keyframes wave {
     0% {
@@ -51,13 +53,34 @@
 @mixin color-slide-animation ($color1, $color2) {
   @keyframes color-slide {
     0% {
-      background: $color1;
+      color: $color1;
     }
     50% {
-      background: $color2;
-    } 
+      color: $color2;
+    }
     100% {
-      background: $color1;
+      color: $color1;
+    }
+  }
+}
+
+@mixin slide-in-animations () {
+  @keyframes slide-in-left {
+    from {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+    to {
+      transform: translate3d(0,0,0);
+    }
+  }
+  @keyframes slide-in-right {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+    to {
+      transform: translate3d(0,0,0);
     }
   }
 }

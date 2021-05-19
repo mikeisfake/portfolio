@@ -8,12 +8,16 @@ const Projects = () => {
 
   const cards = ProjectData.map((project, i) => {
     return (
-      <ProjectCard
-        title={project.title}
-        description={project.description}
-        github={project.github}
-        technologies={project.technologies}
-      />
+      <div className="project_cards">
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          github={project.github}
+          technologies={project.technologies}
+          image={project.image}
+          video={project.video}
+        />
+      </div>
     )
   });
 

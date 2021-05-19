@@ -34,18 +34,38 @@ a {
   }
 }
 
+//animations
+
 @include mixins.wave-animation;
 @include mixins.pulse-animation;
-@include mixins.color-slide-animation(colors.$black, colors.$mid-black);
+@include mixins.color-slide-animation(colors.$yellow, colors.$green);
+@include mixins.slide-in-animations;
 
 .wave {
   animation: wave 2s ease-in-out infinite both;
 }
-
 .pulse {
   animation: pulse 3s ease-in-out infinite both;
 }
-
 .color-slide {
   animation: color-slide 3s ease-in-out infinite both;
+}
+.slide-in-left {
+  animation: slide-in-left 1s ease;
+  animation-fill-mode: both;
+}
+.slide-in-right{
+  animation: slide-in-right 1s ease;
+  animation-fill-mode: both;
+}
+
+//delay animations
+.delay {
+  animation-delay: .5s;
+}
+.delay-1 {
+  animation-delay: 1s;
+}
+.delay-2 {
+  animation-delay: 1.5s;
 }
