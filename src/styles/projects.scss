@@ -1,0 +1,69 @@
+@use './colors';
+@use './fonts';
+@use './format';
+@use './mixins';
+
+.project_cards {
+  background: colors.$black;
+  padding: 100px 50px;
+  h1 {
+    font-family: fonts.$display;
+    font-size: 3rem;
+    margin-bottom: 35px;
+    color: colors.$yellow;
+  }
+  .card {
+    background: colors.$black;
+    margin-bottom: 20px;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: colors.$green;
+    }
+    .card_content {
+      display: flex;
+      iframe {
+
+      }
+      img {
+        border-radius: format.$radius;
+      }
+      .card_details {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: colors.$overlay;
+        margin-left: 20px;
+        padding: 25px;
+        border-radius: format.$radius;
+        width: 100%;
+        p {
+          font-family: fonts.$monospace;
+          font-size: 1.2rem;
+          line-height: 150%;
+        }
+        a {
+          color: colors.$white;
+          font-weight: bold;
+          background: colors.$green;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: format.$radius;
+          display: inline-block;
+          &:hover i {
+            color: colors.$black;
+          }
+        }
+        .technologies {
+          margin-top: 10px;
+          span {
+            padding: 8px;
+            margin-right: 5px;
+            background: colors.$overlay;
+            border-radius: format.$radius;
+          }
+        }
+      }
+    }
+  }
+}
