@@ -6,7 +6,7 @@ const TechStack = props => {
     return (<span>{tech}</span>)
   });
 
-  return (<div>{langs}</div>
+  return (<div className="technologies"> <p>technologies:</p><br /> {langs}</div>
   )
 }
 
