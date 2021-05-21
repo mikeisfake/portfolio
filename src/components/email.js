@@ -13,11 +13,16 @@ const EmailForm = () => {
       );
   }
 
-  window.onbeforeunload = () => {
-  for(const form of document.getElementsByTagName('form')) {
-    form.reset();
+  const isBrowser = typeof window !== 'undefined'
+  
+  if (isBrowser) {
+    window.onbeforeunload = () => {
+      for(const form of document.getElementsByTagName('form')) {
+        form.reset();
+      }
+    }
   }
-}
+
 
  return (
    <>
