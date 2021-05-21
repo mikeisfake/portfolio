@@ -6,6 +6,14 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import '../styles/index.scss'
 
 const Layout = ({children}) => {
+
+  const handleBurger = event => {
+    const menu = document.querySelector('.nav-links')
+    const burger = document.querySelector('.hamburger')
+
+    menu.classList.toggle('open')
+    burger.classList.toggle('open')
+  }
   return (
 
     <div id="main-container">
@@ -14,18 +22,23 @@ const Layout = ({children}) => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       </Helmet>
       <div id="nav">
-        <AniLink cover bg="#2f968a" direction="right" to='/' activeStyle={{
-          'border-right' : '5px solid #2f968a'
-        }}>home</AniLink>
-        <AniLink cover bg="#2f968a" direction="right" to='/projects' activeStyle={{
+        <div className="hamburger" onClick={handleBurger}>
+          <span className="line"></span>
+        </div>
+        <div className="nav-links">
+          <AniLink cover bg="#2f968a" direction="right" to='/' activeStyle={{
             'border-right' : '5px solid #2f968a'
-        }}>projects</AniLink>
-        <AniLink cover bg="#2f968a" direction="right" to='/about' activeStyle={{
-          'border-right' : '5px solid #2f968a'
-        }}>about</AniLink>
-        <AniLink cover bg="#2f968a" direction="right" to='/contact' activeStyle={{
-          'border-right' : '5px solid #2f968a'
-        }}>contact</AniLink>
+          }}>home</AniLink>
+          <AniLink cover bg="#2f968a" direction="right" to='/projects' activeStyle={{
+            'border-right' : '5px solid #2f968a'
+          }}>projects</AniLink>
+          <AniLink cover bg="#2f968a" direction="right" to='/about' activeStyle={{
+            'border-right' : '5px solid #2f968a'
+          }}>about</AniLink>
+          <AniLink cover bg="#2f968a" direction="right" to='/contact' activeStyle={{
+            'border-right' : '5px solid #2f968a'
+          }}>contact</AniLink>
+        </div>
       </div>
       {children}
       <div id="footer">

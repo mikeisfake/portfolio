@@ -14,6 +14,13 @@
   padding: 40px;
   border-radius: format.$radius;
   margin: 20px 0;
+  @media (max-width: format.$tablet) {
+    width: calc(100% - 80px);
+  }
+  @media (max-width: format.$phone) {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 //animations
