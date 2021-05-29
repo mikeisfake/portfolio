@@ -43,6 +43,7 @@
       @media (max-width: format.$phone) {
         font-size: 1.7rem;
       }
+      @include mixins.period;
       img {
         border-radius: 100%;
         width: 70px;

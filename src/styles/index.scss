@@ -37,9 +37,7 @@ a {
 
 //animations
 
-@include mixins.wave-animation;
-@include mixins.pulse-animation;
-@include mixins.color-slide-animation(colors.$yellow, colors.$green);
+@include mixins.basic-animations;
 @include mixins.slide-in-animations;
 
 .wave {
@@ -48,8 +46,8 @@ a {
 .pulse {
   animation: pulse 3s ease-in-out infinite both;
 }
-.color-slide {
-  animation: color-slide 3s ease-in-out infinite both;
+.bounce {
+  animation: bounce 2s ease-in-out infinite both;
 }
 .slide-in-left {
   animation: slide-in-left 1s ease;
