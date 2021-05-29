@@ -14,7 +14,7 @@ export const ProjectData = [
     description: 'THIRTYFIVE is an application for forgetful film lovers built using React and Redux for the frontend and Ruby on Rails for the backend. This app employs the use of a third party API to fetch data about movies as well as a custom Rails API for managing application data.',
     github: 'https://github.com/mikeisfake/thirtyfive',
     video: 'https://www.youtube.com/embed/plAryFUoAfM',
-    technologies: ['React','Redux','CSS'
+    technologies: ['React','Redux','CSS','Ruby on Rails'
     ]
   },
 
