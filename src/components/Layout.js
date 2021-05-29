@@ -1,8 +1,8 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
+import NavLinks from '../components/NavLinks'
 import '../styles/index.scss'
 
 const Layout = ({children}) => {
@@ -19,12 +19,6 @@ const Layout = ({children}) => {
     cover.classList.toggle('open')
   }
 
-  const activeStyle = {
-    'border-bottom' : '3px solid #2f968a',
-  }
-
-  const coverColor = '#2f968a'
-
   return (
 
     <div id="main-container">
@@ -37,12 +31,7 @@ const Layout = ({children}) => {
         <div className="hamburger" onClick={handleBurger}>
           <span className="line"></span>
         </div>
-        <div className="nav-links">
-          <AniLink cover bg={coverColor} to='/' activeStyle={activeStyle}>home</AniLink>
-          <AniLink cover bg={coverColor} to='/projects' activeStyle={activeStyle}>projects</AniLink>
-          <AniLink cover bg={coverColor} to='/about' activeStyle={activeStyle}>about</AniLink>
-          <AniLink cover bg={coverColor} to='/contact' activeStyle={activeStyle}>contact</AniLink>
-        </div>
+        <NavLinks />
       </div>
       {children}
       <div id="footer">
