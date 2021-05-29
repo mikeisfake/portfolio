@@ -24,7 +24,7 @@ const Projects = () => {
   return (
     <Layout>
       <div className="project_cards">
-        <h1><Emoji hex="&#x1F468;&#x1F3FE;&#x200D;&#x1F4BB;" description="man at computer"/> some of my work.</h1>
+        <h1><Emoji hex="&#x1F468;&#x1F3FE;&#x200D;&#x1F4BB;" description="man at computer"/> some of my work<span>.</span></h1>
         {cards}
       </div>
     </Layout>

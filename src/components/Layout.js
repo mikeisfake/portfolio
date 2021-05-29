@@ -10,9 +10,17 @@ const Layout = ({children}) => {
   const handleBurger = event => {
     const menu = document.querySelector('.nav-links')
     const burger = document.querySelector('.hamburger')
+    const container = document.getElementById('main-container')
+    const cover = document.getElementById('cover')
 
     menu.classList.toggle('open')
     burger.classList.toggle('open')
+    container.classList.toggle('open')
+    cover.classList.toggle('open')
+  }
+
+  const activeStyle = {
+    'border-bottom' : '3px solid #2f968a',
   }
   return (
 
@@ -21,23 +29,16 @@ const Layout = ({children}) => {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"></link>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       </Helmet>
+      <div id="cover" onClick={handleBurger}></div>
       <div id="nav">
         <div className="hamburger" onClick={handleBurger}>
           <span className="line"></span>
         </div>
         <div className="nav-links">
-          <AniLink cover bg="#2f968a" direction="right" to='/' activeStyle={{
-            'border-right' : '5px solid #2f968a'
-          }}>home</AniLink>
-          <AniLink cover bg="#2f968a" direction="right" to='/projects' activeStyle={{
-            'border-right' : '5px solid #2f968a'
-          }}>projects</AniLink>
-          <AniLink cover bg="#2f968a" direction="right" to='/about' activeStyle={{
-            'border-right' : '5px solid #2f968a'
-          }}>about</AniLink>
-          <AniLink cover bg="#2f968a" direction="right" to='/contact' activeStyle={{
-            'border-right' : '5px solid #2f968a'
-          }}>contact</AniLink>
+          <AniLink cover bg="#1b1a1a" to='/' activeStyle={activeStyle}>home</AniLink>
+          <AniLink cover bg="#1b1a1a" to='/projects' activeStyle={activeStyle}>projects</AniLink>
+          <AniLink cover bg="#1b1a1a" to='/about' activeStyle={activeStyle}>about</AniLink>
+          <AniLink cover bg="#1b1a1a" to='/contact' activeStyle={activeStyle}>contact</AniLink>
         </div>
       </div>
       {children}

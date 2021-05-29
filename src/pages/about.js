@@ -16,7 +16,7 @@ const About = () => {
       </Helmet>
       <div id="about">
         <article>
-          <h1><StaticImage src='../images/animoji.png' alt='animoji protrait' /> a bit about me</h1>
+          <h1><StaticImage src='../images/animoji.png' alt='animoji protrait' /> a bit about me<span>.</span></h1>
           <AboutText />
 
           <div className="tools">

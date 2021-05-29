@@ -14,7 +14,7 @@ const EmailForm = () => {
   }
 
   const isBrowser = typeof window !== 'undefined'
-  
+
   if (isBrowser) {
     window.onbeforeunload = () => {
       for(const form of document.getElementsByTagName('form')) {
@@ -26,7 +26,7 @@ const EmailForm = () => {
 
  return (
    <>
-     <h1><Emoji description="envelope" hex="&#x1F4E9;"/>get in touch<span>.</span></h1>
+     <h1><Emoji description="envelope" hex="&#x1F4E9;" className="bounce"/>get in touch<span>.</span></h1>
 
      <form onSubmit={handleSubmit}>
 
