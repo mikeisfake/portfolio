@@ -1,22 +1,17 @@
 //reset
-@use './reset';
+@use './modules/reset';
 
 //pages
 @use './home';
-@use './layout';
-@use './about';
-@use './contact';
-@use './projects';
 
 // modules
-@use './fonts';
-@use './colors';
-@use './mixins';
+@use './modules/fonts';
+@use './modules/colors';
+@use './modules/mixins';
+@use './modules/format';
 
 body {
   background-color: colors.$black;
-  background-image: radial-gradient(colors.$off-black 1px, colors.$black 1px);
-  background-size: 20px 20px;
   color: colors.$white;
   font-family: fonts.$roboto;
 }
