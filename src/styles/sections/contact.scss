@@ -1,0 +1,116 @@
+@use '../modules/colors';
+@use '../modules/fonts';
+@use '../modules/format';
+
+#contact {
+  margin: 5em 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;;
+  height: 100vh;
+  .img-wrapper {
+    position: relative;
+    width: 70vw;
+    height: 100%;
+    margin-right: 5em;
+    .blocker {
+      position: absolute;
+      mix-blend-mode: color;
+      // backdrop-filter: brightness(35%);
+      // background-color: colors.$green;
+      background-image: radial-gradient(colors.$green 1px, colors.$black 1px);
+      background-size: 5px 5px;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    font-family: fonts.$monospace;
+    width: 60%;
+    line-height: 1.7rem;
+    margin: 1.5em 0;
+  }
+  h1 {
+    width: 60%;
+    text-align: left;
+    font-size: 5em;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 2px colors.$green;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    .info {
+      display: flex;
+      flex-direction: row;
+      input {
+        background: lighten(colors.$black, 5%);
+        font-size: 1em;
+        padding: 1rem;
+        border: none;
+        margin: 0.5em;
+        color: colors.$white;
+        &[type="text"] {
+          flex: 2;
+        }
+        &[type="email"] {
+          flex: 2;
+        }
+        &:focus {
+            outline: none;
+            background: lighten(colors.$black, 10%)
+        }
+    }
+}
+textarea {
+      background: lighten(colors.$black, 5%);
+      font-size: 1em;
+      padding: 1rem;
+      border: none;
+      margin: 0.5em;
+      font-family: fonts.$sans-serif;
+      color: colors.$white;
+      &:focus {
+          background: lighten(colors.$black, 10%);
+          outline: none;
+      }
+    }
+    button {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        align-self: flex-end;
+        margin: 0.5em;
+        padding: .5rem 1rem;
+        border: 3px solid colors.$green;
+        border-radius: 3px;
+        background: transparent;
+        color: colors.$white;
+        transition: .1s ease;
+        span {
+          font-size: 1.5em;
+        }
+        &:hover {
+          background: rgba(colors.$green, .5)
+        }
+    }
+  }
+}
