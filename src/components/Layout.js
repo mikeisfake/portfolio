@@ -1,56 +1,83 @@
-import React from 'react'
-import {Helmet} from 'react-helmet'
+import React, { useState, useEffect } from "react";
+import { Link } from 'gatsby';
+import { StaticImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
 
+import "../styles/index.scss";
 
-import NavLinks from '../components/NavLinks'
-import '../styles/index.scss'
+const Layout = ({ children }) => {
 
-const Layout = ({children}) => {
+  const [left, setLeft] = useState(0)
+  const [top, setTop] = useState(0)
 
-  const handleBurger = event => {
-    const menu = document.querySelector('.nav-links')
-    const burger = document.querySelector('.hamburger')
-    const container = document.getElementById('main-container')
-    const cover = document.getElementById('cover')
+  const handleClick = e => {
+    let el = e.nativeEvent.target.hash;
+    let node = document.querySelector(el)
+    e.preventDefault();
+    node && node.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
 
-    menu.classList.toggle('open')
-    burger.classList.toggle('open')
-    container.classList.toggle('open')
-    cover.classList.toggle('open')
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  const handleMouseMove = e => {
+    setLeft(e.nativeEvent.pageX)
+    setTop(e.nativeEvent.pageY)
+  }
+
+  const cursorStyle = {
+    top: top + "px",
+    left: left + "px",
   }
 
   return (
-
-    <div id="main-container">
+    <>
       <Helmet>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"></link>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <title>Mike Cooper | Front End Developer</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
       </Helmet>
-      <div id="cover" onClick={handleBurger}></div>
-      <div id="nav">
-        <div className="hamburger" onClick={handleBurger}>
-          <span className="line"></span>
-        </div>
-        <NavLinks />
-      </div>
-      {children}
-      <div id="footer">
-        <div className="socials">
+      <div id="layout" onMouseMove={handleMouseMove}>
+        <div className="cursor" style={cursorStyle}></div>
+        <nav id="main-nav">
+          <div
+            onClick={scrollToTop}
+            className="img-wrapper animate__animated animate__fadeInUp"
+          >
+            <StaticImage src="../images/animoji.png" alt="animoji protrait" />
+          </div>
+
+          <div className="spacer"></div>
           <ul>
-            <li>
-              <a href='https://github.com/mikeisfake' target="_blank" rel="noreferrer"><i class="devicon-github-original" ></i>
+            <li className="animate__animated animate__fadeInUp delay">
+              <a href="#about" onClick={handleClick}>
+                About
               </a>
             </li>
-            <li>
-              <a href='https://www.linkedin.com/in/michael-cooper-259985105/' target="_blank" rel="noreferrer"><i class="devicon-linkedin-plain"></i> </a>
+            <li className="animate__animated animate__fadeInUp delay-1">
+              <a href="#projects" onClick={handleClick}>
+                Projects
+              </a>
             </li>
-            <li>
-              <a href='https://vocitates-blog.tumblr.com/' target="_blank" rel="noreferrer"><i class="fab fa-tumblr fa-fw"></i> </a>
+            <li className="animate__animated animate__fadeInUp delay-2">
+              <a href="#contact" onClick={handleClick}>
+                Contact
+              </a>
+            </li>
+            <li className="animate__animated animate__fadeInUp delay-3">
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
-        </div>
+        </nav>
+        {children}
       </div>
-    </div>
+    </>
   )
 }
 

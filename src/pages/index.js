@@ -1,24 +1,35 @@
 import * as React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
-import Layout from '../components/Layout'
-import { Emoji } from '../components/Emoji'
+import { Hero } from "../sections/Hero"
+import { About } from "../sections/About"
+import { Contact } from "../sections/Contact"
+import { Projects } from "../sections/Projects"
+
+import Layout from "../components/Layout"
+import { Emoji } from "../components/Emoji"
+
+import { ProjectData as data } from "../data/ProjectData"
 
 const Index = () => {
+
   return (
     <Layout>
-      <div id="hero">
-        <div className="title">
-          <h1 className="slide-in-left color-slide">
-            <Emoji description="waving hand" hex="&#x1F44B;&#x1F3FE;" className="wave" />i'm mike</h1>
-          <h2 className="slide-in-left delay">& I make beautiful things for the web.</h2>
-        </div>
-        <span className="cta slide-in-left delay-1">
-          <AniLink cover bg="#2f968a" direction="right" to='/contact' className="pulse">contact me</AniLink>
-        </span>
+      <section id="hero">
+        <Hero />
+      </section>
 
-      </div>
+      <section id="about">
+        <About />
+      </section>
 
+      <section id="projects">
+        <Projects data={data} />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
     </Layout>
   )
 }
