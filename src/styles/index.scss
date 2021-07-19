@@ -3,6 +3,13 @@
 
 //pages
 @use './home';
+@use './components/layout';
+
+//sections 
+@use './sections/hero';
+@use './sections/about';
+@use './sections/contact';
+@use './sections/projects';
 
 // modules
 @use './modules/fonts';
@@ -10,23 +17,18 @@
 @use './modules/mixins';
 @use './modules/format';
 
+
 body {
   background-color: colors.$black;
   color: colors.$white;
-  font-family: fonts.$roboto;
+  font-family: fonts.$sans-serif;
 }
 
 a {
   text-decoration: none;
   color: colors.$gray;
-  &:hover {
-    color: colors.$yellow;
-  }
   &:visited {
     color: colors.$gray;
-    &:hover {
-      color: colors.$yellow;
-    }
   }
 }
 
@@ -41,8 +43,8 @@ a {
 .pulse {
   animation: pulse 3s ease-in-out infinite both;
 }
-.bounce {
-  animation: bounce 2s ease-in-out infinite both;
+.my_bounce {
+  animation: my_bounce 2s ease-in-out infinite both;
 }
 .slide-in-left {
   animation: slide-in-left 1s ease;
@@ -53,13 +55,36 @@ a {
   animation-fill-mode: both;
 }
 
+.slide-in-up {
+  animation: slide-in-up 1s ease;
+  animation-fill-mode: both;
+}
+
 //delay animations
 .delay {
-  animation-delay: .5s;
+  animation-delay: .25s;
 }
 .delay-1 {
-  animation-delay: 1s;
+  animation-delay: .5s;
 }
 .delay-2 {
+  animation-delay: .75s;
+}
+.delay-3 {
+  animation-delay: 1s;
+}
+.delay-4 {
+  animation-delay: 1.25s;
+}
+.delay-5 {
   animation-delay: 1.5s;
+}
+.delay-6 {
+  animation-delay: 1.75s;
+}
+.delay-7 {
+  animation-delay: 2s;
+}
+.delay-8 {
+  animation-delay: 2.25s;
 }
