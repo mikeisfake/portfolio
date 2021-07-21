@@ -1,7 +1,7 @@
 ---
 title: What is BEM
 slug: what-is-bem
-tagline: disecting the popular CSS methodology
+tagline: Disecting the popular CSS methodology
 tags: [css, methodologies]
 date: 2021.06.05
 ---
