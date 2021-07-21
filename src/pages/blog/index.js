@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import "../../styles/index.scss"
 
@@ -41,6 +42,9 @@ const blog = ({ data }) => {
 
   return (
     <div id="blog">
+      <Helmet>
+        <title>Mike Cooper | Blog</title>
+      </Helmet>
       <Link to="/">
         <span className="material-icons home-button">home</span>
       </Link>
