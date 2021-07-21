@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -13,6 +15,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogs`,
+        path: `${__dirname}/src/blogs`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -38,5 +47,6 @@ module.exports = {
         display: "swap",
       },
     },
+    `gatsby-transformer-remark`,
   ],
 }
