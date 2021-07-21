@@ -9,6 +9,8 @@
 @use './sections/about';
 @use './sections/contact';
 @use './sections/projects';
+@use './sections/blog.scss';
+@use './sections/post.scss';
 
 // modules
 @use './modules/fonts';
