@@ -1,16 +1,23 @@
-import React from 'react';
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 export const ProjectCard = ({ project }) => {
+  const {
+    title,
+    description,
+    github,
+    site,
+    video,
+    image,
+    technologies,
+  } = project
 
-  const {title, description, github, site, video, image, technologies} = project;
-
-  const pointer = site ? site : video;
+  const pointer = site ? site : video
 
   return (
     <>
-      <div className="card">
+      <a href={pointer} className="card">
         <div className="title">
           <h3>{title}</h3>
           <div className="links">
@@ -23,21 +30,21 @@ export const ProjectCard = ({ project }) => {
           </div>
         </div>
         <div className="img-wrapper">
-          <div className="blocker"></div>
-          <a href={pointer}>
-            <img src={image} alt={title} />
-          </a>
-          <div className="tech-stack">
-            <h4>Technologies</h4>
-            <ul>
-              {technologies.map(tech => {
-                return <li>{tech}</li>
-              })}
-            </ul>
-          </div>
+          {/* <div className="blocker"></div> */}
+
           <p className="description">{description}</p>
+          <img src={image} alt={title} />
         </div>
-      </div>
+        <div className="tech-stack">
+          {/* <h4>Technologies</h4> */}
+          <span className="material-icons">storage</span>
+          <ul>
+            {technologies.map(tech => {
+              return <li>{tech}</li>
+            })}
+          </ul>
+        </div>
+      </a>
     </>
   )
 }
