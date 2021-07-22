@@ -3,8 +3,7 @@
 @use '../modules/format';
 
 #contact {
-  margin: 5em 0;
-  margin-bottom: 0;
+  margin-top: 5em;
   display: flex;
   justify-content: center;
   background: colors.$black;
@@ -16,6 +15,9 @@
     margin: 0 auto;
     margin-bottom: 1em;
     min-width: 500px;
+    @media (max-width: format.$tablet) {
+      width: 100%;
+    }
   }
   p {
     font-family: fonts.$monospace;
@@ -30,12 +32,19 @@
     font-weight: 600;
     color: transparent;
     -webkit-text-stroke: 2px colors.$green;
+    @media (max-width: format.$tablet) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   form {
     display: flex;
     flex-direction: column;
     width: 60%;
+    @media (max-width: format.$tablet) {
+      width: 80%;
+    }
     .info {
       display: flex;
       flex-direction: row;
@@ -53,12 +62,12 @@
           flex: 2;
         }
         &:focus {
-            outline: none;
-            background: lighten(colors.$black, 10%)
+          outline: none;
+          background: lighten(colors.$black, 10%);
         }
+      }
     }
-}
-textarea {
+    textarea {
       background: lighten(colors.$black, 5%);
       font-size: 1em;
       padding: 1rem;
@@ -67,28 +76,28 @@ textarea {
       font-family: fonts.$sans-serif;
       color: colors.$white;
       &:focus {
-          background: lighten(colors.$black, 10%);
-          outline: none;
+        background: lighten(colors.$black, 10%);
+        outline: none;
       }
     }
     button {
-        display: flex;
-        align-items: center;
-        width: max-content;
-        align-self: flex-end;
-        margin: 0.5em;
-        padding: .5rem 1rem;
-        border: 3px solid colors.$green;
-        border-radius: 3px;
-        background: transparent;
-        color: colors.$white;
-        transition: .1s ease;
-        span {
-          font-size: 1.5em;
-        }
-        &:hover {
-          background: rgba(colors.$green, .5)
-        }
+      display: flex;
+      align-items: center;
+      width: max-content;
+      align-self: flex-end;
+      margin: 0.5em;
+      padding: 0.5rem 1rem;
+      border: 3px solid colors.$green;
+      border-radius: 3px;
+      background: transparent;
+      color: colors.$white;
+      transition: 0.1s ease;
+      span {
+        font-size: 1.5em;
+      }
+      &:hover {
+        background: rgba(colors.$green, 0.5);
+      }
     }
   }
 }

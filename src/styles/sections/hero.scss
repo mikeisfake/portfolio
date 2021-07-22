@@ -8,7 +8,11 @@
     justify-content: center;
     padding: 0 8em;
     height: 100vh;
-    background: colors.$black;;
+    background: colors.$black;
+     @media (max-width: format.$tablet) {
+      width: calc(100% - 4em);
+      padding: 2em;
+    }
     span {
         margin-right: .4em;
     }
