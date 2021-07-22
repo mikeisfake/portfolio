@@ -28,7 +28,7 @@ For example, in my portfolio site I have `src/styles/index.scss` and at the top 
 
 This structure is awesome for a lot of reasons. For one each document has one job, so when I need to make changes I don't have to search all over the place, I have one place to look and it's done. For example I was so indecisive about what font to use for headings all through out my site. Rather than having to go through the entire document and change the CSS rules in a million places, I have one document that takes care of all of the font stuff.
 
-```
+```css
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@100;700&family=Roboto+Mono:wght@300&display=swap');
 
  $roboto: 'Roboto', sans-serif;
@@ -49,13 +49,13 @@ In this project, I used mixins in a couple of very powerful ways. I had a few el
 
 1. Create a `_mixins.scss` partial in my styles directory and reference it in `index.scss`
 2. Create a new mixin in the mixins document like so
-```
+```css
 @mixin animations () {
   ...
 }
 ```
 3. Inside the curly braces, write your animations as you usually would.
-```
+```css
 @keyframes wave {
     0% {
       transform: rotate(0deg);
@@ -70,7 +70,7 @@ In this project, I used mixins in a couple of very powerful ways. I had a few el
 ```
 4. Pull animations mixin into the `index.scss` using `@include`. In this case `@include mixins.animations;`
 5. Use the animation you pulled in to create a class selector.
-```
+```css
 .wave {
   animation: wave 2s ease-in-out infinite both;
 }

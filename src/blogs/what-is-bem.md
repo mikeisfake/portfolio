@@ -12,7 +12,7 @@ I keep seeing BEM listed on job applications or mentioned in technical articles 
 
 BEM is a methodology that helps developers to create reuasable components and code sharing in front-end development. It stands for **B**lock **E**lement **M**odifier. What does this actually mean? I find it to be useful to look at an actual example.
 
-```
+```html
 <div class="card">
   <img src="image.png" alt=""><h2>Title</h2>
   <div class="content">
@@ -37,8 +37,7 @@ BEM uses `__` to indicate an element, and `--` to denote modifiers. In our examp
 
 Our example BEMified might look something like this:
 
-```
-
+```html
       <img src="image.png" alt="" class="card__image">
       Title</h2>
       <div class="card__content">
@@ -60,7 +59,7 @@ Our example BEMified might look something like this:
 
 The CSS for this would be pretty straightforward. Like always you simply use selectors to target the specific elements. I however love Sass and using Sass and BEM together is magical. Here's some of what the Sass might look like for this example.
 
-```
+```css
 .card {
   ...
   &__image {

@@ -1,7 +1,7 @@
 ---
 title: Images in Next.js
 slug: images-on-nextjs
-tagline: The broad issue of images in a Next app deployed to Netlify
+tagline: The issue of images in a Next app deployed to Netlify
 tags: [nextjs, netlify, research, story time]
 date: 2021.07.17
 ---

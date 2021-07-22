@@ -1,8 +1,8 @@
 ---
 title: Deploying with Netlify
 slug: deploying-with-netlify
-tagline: Some trouble-shooting tips I found while deploying my first site with Netlify
-tags: [netlify]
+tagline: Some tips I found while deploying with Netlify
+tags: [netlify, gatsby, github]
 date: 2021.05.22
 ---
 
@@ -43,4 +43,4 @@ This process was...not complicated per se, but it was certainly out of my wheelh
 
 ## **All Done....For Now**
 
-Deploying a site with Netlify is super easy. I am still making some updates to the code (for example I found a few visual bugs with my responsive mobile version, and I decided I hate the color palette I chose), but I know it'll be super easy to re-deploy. I don't even have to do anything but push the code up to GotHub and Netlify automatically handles deploying changes! How neat!
+Deploying a site with Netlify is super easy. I am still making some updates to the code (for example I found a few visual bugs with my responsive mobile version, and I decided I hate the color palette I chose), but I know it'll be super easy to re-deploy. I don't even have to do anything but push the code up to GitHub and Netlify automatically handles deploying changes! How neat!
