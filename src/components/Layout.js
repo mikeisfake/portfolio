@@ -1,37 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { Link } from 'gatsby';
-import { StaticImage } from "gatsby-plugin-image";
-import { Helmet } from "react-helmet";
+import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
-import "../styles/index.scss";
+import "../styles/index.scss"
 
 const Layout = ({ children }) => {
-
-  const [left, setLeft] = useState(0)
-  const [top, setTop] = useState(0)
-
   const handleClick = e => {
-    let el = e.nativeEvent.target.hash;
+    let el = e.nativeEvent.target.hash
     let node = document.querySelector(el)
-    e.preventDefault();
+    e.preventDefault()
     node && node.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     })
-  }
-
-  const handleMouseMove = e => {
-    setLeft(e.nativeEvent.pageX)
-    setTop(e.nativeEvent.pageY)
-  }
-
-  const cursorStyle = {
-    top: top + "px",
-    left: left + "px",
   }
 
   return (
@@ -42,9 +28,12 @@ const Layout = ({ children }) => {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"
+        />
       </Helmet>
-      <div id="layout" onMouseMove={handleMouseMove}>
-        <div className="cursor" style={cursorStyle}></div>
+      <div id="layout">
         <nav id="main-nav">
           <div
             onClick={scrollToTop}
@@ -76,6 +65,17 @@ const Layout = ({ children }) => {
           </ul>
         </nav>
         {children}
+        <div className="socials">
+          <a href="https://twitter.com/mikecdev">
+            <i class="devicon-twitter-original"></i>
+          </a>
+          <a href="https://github.com/mikeisfake">
+            <i class="devicon-github-original"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/michael-cooper-259985105/">
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+        </div>
       </div>
     </>
   )
