@@ -4,7 +4,7 @@
 //pages
 @use './components/layout';
 
-//sections 
+//sections
 @use './sections/hero';
 @use './sections/about';
 @use './sections/contact';
@@ -17,7 +17,6 @@
 @use './modules/colors';
 @use './modules/mixins';
 @use './modules/format';
-
 
 body {
   background-color: colors.$black;
@@ -51,7 +50,7 @@ a {
   animation: slide-in-left 1s ease;
   animation-fill-mode: both;
 }
-.slide-in-right{
+.slide-in-right {
   animation: slide-in-right 1s ease;
   animation-fill-mode: both;
 }
@@ -63,13 +62,13 @@ a {
 
 //delay animations
 .delay {
-  animation-delay: .25s;
+  animation-delay: 0.25s;
 }
 .delay-1 {
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 .delay-2 {
-  animation-delay: .75s;
+  animation-delay: 0.75s;
 }
 .delay-3 {
   animation-delay: 1s;
