@@ -1,28 +1,12 @@
 @use '../modules/colors';
 @use '../modules/fonts';
 @use '../modules/format';
+@use '../modules/mixins';
+
+@include mixins.basic-animations;
 
 #layout {
-  cursor: none;
-  a,
-  input,
-  textarea,
-  button {
-    &:hover {
-      cursor: none;
-    }
-  }
-  .cursor {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid colors.$white;
-    z-index: 99999;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    backdrop-filter: blur(3px) grayscale(100%);
-  }
+  margin-bottom: 4em;
   #main-nav {
     display: flex;
     position: fixed;
@@ -33,13 +17,22 @@
     backdrop-filter: blur(0.5em);
     box-shadow: 0 10px 10px rgba(colors.$black, 1);
     z-index: 5;
+    @media (max-width: format.$phone) {
+      display: none;
+    }
     .img-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: .2s ease;
+      &:hover {
+        img {
+          animation: wave 1s ease-in-out infinite both;
+        }
+      }
       img {
         width: 3.5em;
-        // height: auto;
+        transition: .2s ease;
       }
     }
     .spacer {
@@ -49,20 +42,49 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex: 1;
+      flex: 2;
       list-style-type: decimal-leading-zero;
       li a {
         color: colors.$green;
         &:hover {
           color: colors.$white;
         }
-        &::after {
-          content: "";
-          display: block;
-          width: 10px;
-          height: 10px;
-          position: absolute;
-        }
+      }
+    }
+  }
+  .socials {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: .5em 1.5em;
+    bottom: 2%;
+    right: 2%;
+    background: rgba(lighten(colors.$black, 5%), .5);
+    backdrop-filter: blur(5px);
+    border-radius: 4px;
+    @media (max-width: format.$tablet) {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      a {
+        margin: 0 5em;
+      }
+    }
+    a {
+      margin: .6em 0;
+      font-size: 1.1em;
+      border-radius: 4px;
+      padding: .5rem;
+      color: colors.$white;
+      &:hover {
+        color: colors.$green;
+        background: lighten(colors.$black, 10%);
+      }
+      i {
       }
     }
   }
