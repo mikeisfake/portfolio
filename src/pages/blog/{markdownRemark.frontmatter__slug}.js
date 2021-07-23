@@ -7,20 +7,22 @@ import '../../styles/prism.scss';
 const Post = ({ data }) => {
   const [scrollProgress, setScrollProgress] = useState(0)
   const [readMore, setReadMore] = useState([])
+  const [progressPercent, setProgressPercent] = useState(0)
 
-  const handleScroll = () => {
-    setScrollProgress(window.scrollY)
-    let el = document.getElementById('post')
-    console.log(scrollProgress, document.documentElement.scrollHeight - document.documentElement.clientHeight)
-  }
-  const progressPercent = Math.floor(
-    (scrollProgress /
-      (document.documentElement.scrollHeight -
-        document.documentElement.clientHeight)) *
-      100
-  )
 
   useEffect(() => {
+    const handleScroll = () => {
+    setScrollProgress(window.scrollY)
+    setProgressPercent(
+      Math.floor(
+        (scrollProgress /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight)) *
+          100
+      )
+    )
+  }
+
     window.addEventListener("scroll", handleScroll);
     Prism.highlightAll()
     return () => window.removeEventListener('scroll', handleScroll )
