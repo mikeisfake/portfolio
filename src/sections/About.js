@@ -32,7 +32,7 @@ export const About = () => {
               developer to start my new career. If you think I might be a good
               fit for your team please get in touch.
             </p>
-            <a className="resume" href={resume} target="_blank">
+            <a className="resume" href={resume} target="_blank" rel="noreferrer">
               RESUME
             </a>
           </div>
