@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 export const ProjectCard = ({ project }) => {
   const {
@@ -21,7 +19,7 @@ export const ProjectCard = ({ project }) => {
         <div className="title">
           <h3>{title}</h3>
           <div className="links">
-            <a href={github} target="_blank">
+            <a href={github} target="_blank" rel="noreferrer">
               <span class="material-icons">code</span>
             </a>
             <a href={pointer}>
