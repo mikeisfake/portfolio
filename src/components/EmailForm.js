@@ -2,7 +2,6 @@ import React from "react"
 import { useForm } from "@formspree/react"
 
 import Thanks from "./Thanks"
-import { Emoji } from "./Emoji"
 
 export const EmailForm = () => {
   const [state, handleSubmit] = useForm("xqkwppnd")
