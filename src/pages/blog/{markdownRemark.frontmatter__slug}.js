@@ -89,7 +89,7 @@ const Post = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: content }}
         />
         <ul>{taglist}</ul>
-        <h2>Read More:</h2>
+        <h2>Other posts you may like:</h2>
         <div className="read-more">{readMoreList}</div>
       </div>
     </>
