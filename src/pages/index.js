@@ -19,7 +19,7 @@ const Index = () => {
           <Hero />
         </section>
 
-      <Fade bottom>
+      <Fade>
         <section id="about">
           <About />
         </section>
