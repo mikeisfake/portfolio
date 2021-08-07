@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+
 
 export const Hero = () => {
   const handleClick = e => {
