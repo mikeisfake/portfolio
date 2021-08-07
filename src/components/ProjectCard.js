@@ -1,4 +1,5 @@
 import React from "react"
+import Fade from "react-reveal/Fade"
 
 export const ProjectCard = ({ project }) => {
   const {
@@ -15,6 +16,7 @@ export const ProjectCard = ({ project }) => {
 
   return (
     <>
+    <Fade>
       <a href={pointer} className="card">
         <div className="title">
           <h3>{title}</h3>
@@ -43,6 +45,7 @@ export const ProjectCard = ({ project }) => {
           </ul>
         </div>
       </a>
+    </Fade>
     </>
   )
 }
