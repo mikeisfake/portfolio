@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"
         />
+        <meta property="og:image" content="" />
       </Helmet>
       <div id="layout">
         <nav id="main-nav">
