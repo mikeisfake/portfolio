@@ -1,7 +1,7 @@
 ---
 title: Gatsby Filesystem Route API
 slug: filesystem-route-api
-tagline: How I used GAtsby's Filesystem Route API to make this blog
+tagline: How I used Gatsby's Filesystem Route API to make this blog
 tags: [gatsby, blog, routing, graphql]
 date: 2021.07.22
 ---
