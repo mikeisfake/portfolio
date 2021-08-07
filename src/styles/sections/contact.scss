@@ -20,7 +20,9 @@
     }
   }
   p {
-    font-family: fonts.$monospace;
+    // font-family: fonts.$monospace;
+    font-weight: 100;
+    font-size: 1.2em;
     width: 60%;
     line-height: 1.7rem;
     margin: 1.5em 0;
