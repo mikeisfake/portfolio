@@ -88,7 +88,7 @@ const Post = ({ data }) => {
           className="content"
           dangerouslySetInnerHTML={{ __html: content }}
         />
-        <ul>{taglist}</ul>
+        <ul className="taglist">{taglist}</ul>
         <h2>Other posts you may like:</h2>
         <div className="read-more">{readMoreList}</div>
       </div>
