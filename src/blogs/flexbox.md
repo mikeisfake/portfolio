@@ -1,6 +1,6 @@
 ---
-title: Flexbox
-slug: flexbox
+title: Flexbox | Parent
+slug: flexbox-parent
 tagline: Unravelling the mystrious CSS layout model
 tags: [CSS, flexbox, reference]
 date: 2021.08.13
@@ -45,14 +45,27 @@ Note that any flexbox container is created using the `display` property set to `
 
 Justify-content and align-items are the 2 properties that I pretty much always use when making a flexbox layout. The others all come in hands on a case by case basis, but almost always after setting display to flex I'm using one or both of those properties to finish things off. It's worth listing out the values that can be used here because there's a lot and they all are super useful. 
 
-**justify-content:**
-+ flex-start (default): items are packed toward the start of the flex-direction.
-+ flex-end: items are packed toward the end of the flex-direction.
-+ start: items are packed toward the start of the writing-mode direction.
-+ end: items are packed toward the end of the writing-mode direction.
-+ left: items are packed toward left edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like start.
-+ right: items are packed toward right edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like end.
-+ center: items are centered along the line
-+ space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
-+ space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
-+ space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+| justify-content | |
+| ---|---|
+| flex-start (default) | items are packed toward the start of the flex-direction. |
+| flex-end | items are packed toward the end of the flex-direction. |
+| start | items are packed toward the start of the writing-mode direction. |
+| end | items are packed toward the end of the writing-mode direction. |
+| left | items are packed toward left edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like start. |
+| right | items are packed toward right edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like end. |
+| center | items are centered along the line |
+| space-between | items are evenly distributed in the line; first item is on the start line, last item on the end line |
+| space-around | items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies. |
+| space-evenly | items are distributed so that the spacing between any two items (and the space to the edges) is equal. |
+
+And heres a list for align items: 
+
+| align-items| |
+|---|---|
+| stretch (default) | stretch to fill the container (still respect min-width/max-width)| 
+| flex-start / start / self-start | items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules.| 
+| flex-end / end / self-end | items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules.| 
+| center | items are centered in the cross-axis| 
+| baseline | items are aligned such as their baselines align|
+
+Next time I'll go more into the children and their properties. The children have fewer properties overall, but their uses are much more specific in my opinion. 
