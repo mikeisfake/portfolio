@@ -129,18 +129,19 @@
     }
     ol,
     ul {
-      list-style-type: decimal-leading-zero;
+      list-style-type: disc;
       list-style-position: inside;
+      width: 90%;
+      margin: .5em auto;
       li {
-        color: darken(colors.$white, 10%);
         margin: 0.5em 0;
         line-height: 1.5;
-        font-weight: 100;
+        font-weight: 300;
         font-size: 1.2em;
       }
     }
   }
-  ul {
+  .taglist{
     margin: 1em 0;
     li {
       display: inline-block;
